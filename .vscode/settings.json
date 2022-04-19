@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e6052f7f-1de6-41cf-bcc8-0bddd1ec8984/resourceGroups/appsvc_linux_centralus_premium/providers/Microsoft.Web/sites/nba-game-predictions-with-ml",
+    "appService.deploySubpath": "."
+}

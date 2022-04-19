@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Yam Bets NBA season simulator!</h1>
+    </div>
+
+    <div class="headertext">
+        <h3>Please select a season and click start.</h3>
+    </div> 
+    <div id="images">
+        <figure>
+            <img src="{{ href1 }}" height="500" />
+            <img src="{{ href2 }}" height="500" />  
+        </figure>
+    </div>
+    
+    <div class="season-selection">
+        <form method="POST">
+            <label for="seasons">Choose a season:</label>
+            <select name="seasons" id="seasons">
+                <option value="2014-15" selected>2014-15</option>
+                <option value="2015-16">2015-16</option>
+                <option value="2016-17">2016-17</option>
+                <option value="2017-18">2017-18</option>
+                <option value="2018-19">2018-19</option>
+                <option value="2019-20">2019-20</option>
+                <option value="2020-21">2020-21</option>
+            </select>
+            <input type="submit">
+        </form>
+        
+    </div>
+    
+    <script src="../static/js/index.js"></script>
+</body>
+</html>

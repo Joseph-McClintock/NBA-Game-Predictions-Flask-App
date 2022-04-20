@@ -20,7 +20,8 @@ def index():
         calculate_model(seasons)
         piechart = "static/images/piechart.png"
         scatterplot = "static/images/scatterplot.png"
-        return render_template('index.html', href1=piechart, href2=scatterplot)
+        barchart = "static/images/barchart.png"
+        return render_template('index.html', href1=piechart, href2=scatterplot, href3=barchart)
 
 
 def calculate_model(picked_season):
@@ -58,4 +59,17 @@ def calculate_model(picked_season):
     team_wins = df_all_teams['Wins'].tolist()
     plt.scatter(team_elo,team_wins, label='Elo to Losses')
     plt.savefig('static/images/scatterplot.png')
+    plt.clf()
+
+    wl_list = [0,0]
+    for result in predictions:
+        if result == 'W':
+            wl_list[0] += 1
+        elif result == 'L':
+            wl_list[1] += 1
+
+    # Bar graph to show how many wins and losses the model guessed
+    plt.title('Prediction guesses for ' + str(picked_season))
+    plt.bar(wl, wl_list)
+    plt.savefig('static/images/barchart.png')
     plt.clf()

@@ -1,2 +1,2 @@
 # Link to website
-https://yam-bets-nba-game-predictions.azurewebsites.net/
+https://nba-game-predicions.azurewebsites.net/

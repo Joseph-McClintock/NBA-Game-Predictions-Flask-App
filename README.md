@@ -1,2 +1,2 @@
 # Link to website
-https://basketball-game-predictions-with-ml.azurewebsites.net/
+https://nba-game-predicions.azurewebsites.net/
